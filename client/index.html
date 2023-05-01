@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/adey2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adey AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="navbar">
+        <a href="#home"><img src="assets/adey2.png" alt="Adey AI">Adey AI</a>
+        <a href="#news">News</a>
+        <a href="#products">Products</a>
+        <a href="#signup">Signup</a>
+        <a href="#aboutus">About Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+          &#9776;
+        </a>
+      </div>
+      <div id="chat_container"></div>
+      <form>
+        <textarea name="prompt" rows="1" cols="1" placeholder="Ask Adey..."></textarea>
+        <button type="submit"><img src="assets/send.svg"/></button>
+      </form>
+    </div>
+    <script>
+      /* Toggle the navigation links when clicking the "hamburger" icon */
+      function toggleNavbar() {
+        var x = document.getElementsByClassName("navbar")[0];
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
